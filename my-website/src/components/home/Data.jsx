@@ -4,7 +4,7 @@ function Data(props) {
   return (
     <div>
       <div className="home__data">
-        <h1 className="home___title">
+        <h1 className="home__title">
           Trần Nhật Linh
           <svg
             width="36"
@@ -56,7 +56,7 @@ function Data(props) {
             ></path>
           </svg>
         </h1>
-        <h3 className="home_subtitle">Web Developer</h3>
+        <h3 className="home__subtitle">Web Developer</h3>
         <p className="home__description">
           I'm creative designer based in New York, and I'm very passionate and
           dedicated to my work.
