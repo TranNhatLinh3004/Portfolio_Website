@@ -46,7 +46,10 @@
 
 .footer__social-link:hover {
   background-color: var(--title-color-dark);
+<<<<<<< HEAD
   color: var(--title-color);
+=======
+>>>>>>> a05464f9045a79bb2a7a90f00a8029a533525497
 }
 
 .footer__copy {

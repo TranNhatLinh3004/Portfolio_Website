@@ -4,6 +4,11 @@ import CV from "../../assets/Me-Cv.pdf";
 import Info from "./Info";
 
 function About(props) {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a05464f9045a79bb2a7a90f00a8029a533525497
   return (
     <section className="about section" id="about">
       <h2 className="section__title">About Me</h2>

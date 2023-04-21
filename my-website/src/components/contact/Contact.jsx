@@ -81,7 +81,11 @@ function Contact(props) {
               ></textarea>
             </div>
             <button href="#connect" className="button button--flex">
+<<<<<<< HEAD
               Send
+=======
+              Say Hello
+>>>>>>> a05464f9045a79bb2a7a90f00a8029a533525497
               <svg
                 class="button__icon"
                 xmlns="http://www.w3.org/2000/svg"
