@@ -1,84 +1,177 @@
+.home__container {
+    row-gap: 2rem;
+}
+
 .home__content {
-  display: grid;
-  grid-template-columns: 116px repeat(2, 500px);
-  column-gap: 2rem;
-  padding-top: 5.5rem;
-  align-items: center;
-  /* background: green; */
+    display: grid;
+    grid-template-columns: 116px repeat(2, 500px);
+    column-gap: 2rem;
+    padding-top: 5.5rem;
+    align-items: center;
+    /* background: green; */
+}
+
+svg {
+    color: chartreuse;
+    cursor: pointer;
 }
 
 .home__social {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .home__social i {
-  font-size: 1.5rem;
-  color: var(--title-color);
+    font-size: 1.5rem;
+    color: var(--title-color);
 }
 
 .home__social i:hover {
-  font-size: 1.7rem;
-  transition: 0.3s;
-  color: var(--title-color-dark);
+    font-size: 1.7rem;
+    transition: 0.3s;
+    color: var(--title-color-dark);
 }
 
 .home__title {
-  font-size: var(--big-font-size);
-  margin-bottom: var(--mb-0-25);
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-0-25);
 }
 
 .home__hand {
-  width: 38px;
-  height: 38px;
-  margin-left: 0.4rem;
+    width: 38px;
+    height: 38px;
+    margin-left: 0.4rem;
 }
 
 .home__subtitle {
-  position: relative;
-  font-size: var(--h3-font-size);
-  font-weight: normal;
-  margin-bottom: var(--mb-1);
-  margin-left: 4rem;
+    position: relative;
+    font-size: var(--h3-font-size);
+    font-weight: normal;
+    margin-bottom: var(--mb-1);
+    margin-left: 4rem;
 }
 
 .home__subtitle::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 1px;
-  background-color: var(--text-color);
-  left: -4rem;
-  top: 1rem;
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 1px;
+    background-color: var(--text-color);
+    left: -4rem;
+    top: 1rem;
 }
 
 .home__description {
-  margin-bottom: var(--mb-3);
-  max-width: 400px;
+    margin-bottom: var(--mb-3);
+    max-width: 400px;
 }
 
 .home__img {
-  background: url("../../assets/me.jpg");
-  width: 300px;
-  height: 400px;
-  order: 1;
-  cursor: pointer;
-  justify-content: center;
-  background-size: cover;
-  /* box-shadow: inset 10px 10px 0 9px rgb(255, 255, 255 / 30%); */
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: profile_animate 8s ease-in-out infinite 1s;
+    background: url("../../assets/me.jpg");
+    width: 300px;
+    height: 400px;
+    order: 1;
+    cursor: pointer;
+    justify-content: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: profile_animate 8s ease-in-out infinite 1s;
 }
 
 @keyframes profile_animate {
-  0% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  }
-  50% {
-    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-  }
-  100% {
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-  }
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+.home__scroll {
+    margin-left: 8rem;
+}
+
+.wheel {
+    animation: scroll 2s ease infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(3.7rem);
+    }
+}
+
+.home__scroll-name {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin-right: var(--mb-0-25);
+    margin-left: 2px;
+}
+
+.home__scroll-arrow {
+    font-size: 1.25rem;
+    color: var(--title-color);
+}
+
+@media screen and (max-width: 992px) {
+    .home__content {
+        column-gap: 1.25rem;
+        grid-template-columns: 100px repeat(2, 1fr);
+    }
+    .home__hand {
+        width: 26px;
+        height: 26px;
+    }
+    .home__title {
+        font-size: var(--h1-font-size);
+    }
+    .home__subtitle {
+        font-size: var(--h4-font-size);
+    }
+    .home__subtitle::before {
+        width: 50px;
+        top: 0.8rem;
+        left: -3.5rem;
+    }
+    .home__description {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* For medium devices */
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0 0 var(--header-height) 0;
+    }
+    .section {
+        padding: 2rem 0 4rem;
+    }
+    .section__subtitle {
+        margin-bottom: var(--mb-3);
+    }
+}
+
+@media screen and (max-width: 576px) {}
+
+
+/* For small devices */
+
+@media screen and (max-width: 350px) {
+     :root {
+        --big-font-size: 2.25rem;
+    }
+    .container {
+        margin-left: var(--mb-1);
+        margin-right: var(--mb-1);
+    }
 }

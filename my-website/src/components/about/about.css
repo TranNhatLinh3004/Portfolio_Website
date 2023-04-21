@@ -9,6 +9,21 @@
   width: 350px;
   border-radius: 1.5rem;
   justify-content: center;
+  box-shadow: 5px 5px 0 0px black, 7px 7px 7px 0px black;
+  /* 0px 8px 7px black; */
+  /* transform: translateX(0); */
+  animation: about_animate 8s ease-in-out infinite 1s;
+  cursor: pointer;
+}
+
+@keyframes about_animate {
+  0%,
+  100% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(0);
+  }
 }
 
 .about__info {
@@ -27,7 +42,7 @@
   padding: 1rem 1.25rem;
   opacity: 0;
   filter: blur(5px);
-  transition: all 2s;
+  transition: all 1.5s;
   transform: translateX(-10%);
 }
 
@@ -74,5 +89,6 @@
     width: 300px;
     border-radius: 1.5rem;
     justify-content: center;
+    box-shadow: 3px 3px 0 0px black, 5px 5px 5px 0px black;
   }
 }

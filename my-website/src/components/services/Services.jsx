@@ -35,7 +35,7 @@ function Services(props) {
 
           <div
             className={
-              toggleState == 1
+              toggleState === 1
                 ? "services__modal active-modal"
                 : "services__modal"
             }
@@ -107,7 +107,7 @@ function Services(props) {
 
           <div
             className={
-              toggleState == 2
+              toggleState === 2
                 ? "services__modal active-modal"
                 : "services__modal"
             }
@@ -179,7 +179,7 @@ function Services(props) {
 
           <div
             className={
-              toggleState == 3
+              toggleState === 3
                 ? "services__modal active-modal"
                 : "services__modal"
             }
