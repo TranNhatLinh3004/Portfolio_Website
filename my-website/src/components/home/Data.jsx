@@ -61,7 +61,7 @@ function Data(props) {
           I'm creative designer based in New York, and I'm very passionate and
           dedicated to my work.
         </p>
-        <a href="#connect" className="button button--flex">
+        <button href="#connect" className="button button--flex">
           Say Hello
           <svg
             class="button__icon"
@@ -80,7 +80,7 @@ function Data(props) {
               fill="var(--container-color)"
             ></path>
           </svg>
-        </a>
+        </button>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./header.css";
 function Header(props) {
   const [theme, setTheme] = useState("light-theme");
+  const [active, setActive] = useState("Home");
   const [selectedIcon, setSelectedIcon] = useState("uil uil-moon change__bg");
 
   // uil - sun;
@@ -13,6 +14,11 @@ function Header(props) {
         : "uil uil-moon change__bg"
     );
   };
+
+  const handleActive = (e) => {
+    setActive(e.target.id);
+  };
+
   const toggleTheme = () => {
     console.log("hi");
     handleClick();
@@ -40,32 +46,62 @@ function Header(props) {
           <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
             <ul className="nav__list gird">
               <li className="nav__item ">
-                <a href="#home" className="nav__link active__link">
+                <a
+                  href="#home"
+                  id="Home"
+                  className={active === "Home" ? "active" : ""}
+                  onClick={handleActive}
+                >
                   <i className="uil uil-estate nav__icon"></i>Home
                 </a>
               </li>
               <li className="nav__item">
-                <a href="#about" className="nav__link">
+                <a
+                  href="#about"
+                  id="About"
+                  className={active === "About" ? "active" : ""}
+                  onClick={handleActive}
+                >
                   <i className="uil uil-user nav__icon"></i>About
                 </a>
               </li>{" "}
               <li className="nav__item">
-                <a href="#skills" className="nav__link">
+                <a
+                  href="#skills"
+                  id="Skills"
+                  className={active === "Skills" ? "active" : ""}
+                  onClick={handleActive}
+                >
                   <i className="uil uil-file-alt nav__icon"></i>Skills
                 </a>
               </li>{" "}
               <li className="nav__item">
-                <a href="#services" className="nav__link">
+                <a
+                  href="#services"
+                  id="Services"
+                  className={active === "Services" ? "active" : ""}
+                  onClick={handleActive}
+                >
                   <i className="uil uil-briefcase-alt nav__icon"></i>Services
                 </a>
               </li>
               <li className="nav__item">
-                <a href="#testimonial" className="nav__link">
+                <a
+                  href="#testimonial"
+                  id="Portfolio"
+                  className={active === "Portfolio" ? "active" : ""}
+                  onClick={handleActive}
+                >
                   <i className="uil uil-scenery nav__icon"></i>Portfolio
                 </a>
               </li>
               <li className="nav__item">
-                <a href="#contact" className="nav__link">
+                <a
+                  href="#contact"
+                  id="Contact"
+                  className={active === "Contact" ? "active" : ""}
+                  onClick={handleActive}
+                >
                   <i className="uil uil-message nav__icon"></i>Contact
                 </a>
               </li>

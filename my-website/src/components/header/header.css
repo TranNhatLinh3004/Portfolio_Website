@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 
-.nav__link {
+a {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -50,9 +50,12 @@
   font-size: 1.05rem;
 }
 
-.active_link,
-.nav__link:hover {
+a:hover {
   color: var(--main-color);
+}
+
+a.active {
+  color: var(--title-color-dark);
 }
 
 .nav__close,

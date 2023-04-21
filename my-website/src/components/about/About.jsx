@@ -4,8 +4,6 @@ import CV from "../../assets/Me-Cv.pdf";
 import Info from "./Info";
 
 function About(props) {
-
-
   return (
     <section className="about section" id="about">
       <h2 className="section__title">About Me</h2>
@@ -20,7 +18,7 @@ function About(props) {
             I have years of experience and many clients are happy with the
             projects carried out.
           </p>
-          <a href={CV} download className="button button--flex">
+          <button href={CV} download className="button button--flex">
             Download CV
             <svg
               class="button__icon"
@@ -47,7 +45,7 @@ function About(props) {
                 fill="var(--container-color)"
               ></path>
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </section>

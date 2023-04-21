@@ -46,6 +46,7 @@
 
 .footer__social-link:hover {
   background-color: var(--title-color-dark);
+  color: var(--title-color);
 }
 
 .footer__copy {
