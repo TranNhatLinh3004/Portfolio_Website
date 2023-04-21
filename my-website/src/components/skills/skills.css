@@ -1,8 +1,18 @@
-.skills__container {
+.skills__container.hidden {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2rem;
   /* background-color: green;  */
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.5s;
+  transform: translateY(10%);
+}
+
+.skills__container.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
 
 .skills__content {

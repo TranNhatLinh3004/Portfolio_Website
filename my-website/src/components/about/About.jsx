@@ -2,10 +2,9 @@ import React from "react";
 import AboutImg from "../../assets/about.jpg";
 import CV from "../../assets/Me-Cv.pdf";
 import Info from "./Info";
-import { useEffect, useState } from "react";
 
 function About(props) {
-  const [theme, setTheme] = useState("light-theme");
+
 
   return (
     <section className="about section" id="about">
